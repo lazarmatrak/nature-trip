@@ -1,0 +1,18 @@
+// partial scss files start with an _
+// these go to the _base because they are the basic defition of the project
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    //defines what 1rem is
+    font-size: 62.5%; //approximately font-size is 10px because browser default font-size is 16px
+}
+
+body {
+    box-sizing: border-box;
+}

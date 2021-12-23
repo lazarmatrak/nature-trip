@@ -1,0 +1,66 @@
+1. Promeljive u SCSS-u (SASS) se definisu sa znakom $;
+npr : $color-primary: red;
+
+2. & je parent selector. Moze se koristiti da se dodaju pseudo-klase spoljasnjem selektoru;
+npr :
+<nav>
+    <ul class="navigation">
+        <li> </li>
+        <li> </li>
+        <li> </li>
+    </ul>
+</nav>
+
+SASS:
+
+.navigation{
+    list-style: none;
+
+    li{
+        display: inline-block;
+        margin-left: 30px;
+    }
+
+    &:first-child{
+        margin: 0;
+    }
+}
+
+Kompajlira (prevodi) se u sledeci oblik:
+
+CSS:
+
+.navigation li:first-child{
+    margin: 0;
+}
+
+3. Mixini su delovi koda koji se mogu koristiti bilo gde. Mogu se posmatrati kao velike Promeljive
+npr:
+
+@mixin clearfix{                    // definisanje Mixin-a
+    &::after{
+        content="";
+        clear: both;
+        content: table;
+    }
+}
+
+Mixin se poziva sa @include [ime mixin-a]
+npr:
+
+@include clearfix;
+
+
+4. Extends
+
+****Postovati DRY princip (Don't Repeat Yourself)****
+
+%btn-placeholder{
+    //kod koji se ponavlja
+}
+
+Koriscenje @extends:
+
+btn-primary{
+    @extends %btn-placeholder;
+}

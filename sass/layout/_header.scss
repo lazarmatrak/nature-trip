@@ -1,0 +1,29 @@
+.header {
+    height: 95vh;
+    background-image: linear-gradient(to right bottom,
+            rgba($color-primary-light, 0.801),
+            rgba($color-primary-dark, 0.801)),
+        url(../img/hero.jpg);
+    background-size: cover;
+    background-position: top;
+    clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
+    position: relative;
+
+    &__logo-box {
+        position: absolute;
+        top: 4rem;
+        left: 4rem;
+    }
+
+    &__logo {
+        height: 3.5rem;
+    }
+
+    &__text-box {
+        position: absolute;
+        top: 40%;
+        left: 50%; //if left with left:50% the LEFT EDGE of the div container would be on the middle of the screen
+        transform: translate(-50%); // to get the element on the middle, take off 50% from the  X axis and 50% from the Y axis
+        text-align: center;
+    }
+}
