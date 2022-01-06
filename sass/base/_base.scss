@@ -13,12 +13,12 @@ html {
     font-size: 62.5%; //approximately font-size is 10px because browser default font-size is 16px
 
     @include respond(tab-land) {
-        // width < 1200px
+        // width < 900px
         font-size: 56.25%; //1 rem = 9px  9/16 = 56.25%
     }
 
     @include respond(tab-port) {
-        // width < 900px
+        // width < 600px
         font-size: 50%; //1 rem = 8px  6/16 = 50%
     }
 
